@@ -1,0 +1,31 @@
+services:
+  api:
+    build: ./backend
+    container_name: tracker-api
+    env_file:
+      - ./backend/.env
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+      - redis
+    restart: unless-stopped
+  postgres:
+    container_name: tracker-db # ตั้งชื่อคอนเทนเนอร์ให้ตรงกับ DB_HOST ใน .env
+    image: postgres:16-alpine # ใช้เวอร์ชัน 16 ของ PostgreSQL
+    ports:
+      - "5432:5432" # เปิดพอร์ต 5432 เพื่อให้สามารถเชื่อมต่อจากภายนอกได้
+    environment:
+      POSTGRES_USER: dev # ตั้งชื่อผู้ใช้เป็น "dev"
+      POSTGRES_PASSWORD: dev # ตั้งรหัสผ่านเป็น "dev"
+      POSTGRES_DB: tracker # ตั้งชื่อฐานข้อมูลเป็น "tracker"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # ใช้ volume เพื่อเก็บข้อมูลของ PostgreSQL
+    restart: unless-stopped # กันการหยุดโดยอัตโนมัติเมื่อคอนเทนเนอร์ล้มเหลว
+  
+  redis:
+    container_name: tracker-redis
+    image: redis:7-alpine
+
+volumes:
+  postgres_data: # กำหนด volume สำหรับเก็บข้อมูลของ PostgreSQL

@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 
 	"tracker/internal/adapters/handlers"
 	"tracker/internal/adapters/repositories"
@@ -18,11 +19,19 @@ func main() {
 		fmt.Println("Failed to connect to database:", err)
 		return
 	}
-	if err := db.AutoMigrate(&domain.User{}, &domain.Transaction{}); err != nil {
+	if err := db.AutoMigrate(&domain.User{}, &domain.Transaction{}, &domain.Category{}); err != nil {
 		fmt.Println("Failed to migrate database:", err)
 	}
 
 	app := fiber.New()
+
+	// CORS middleware — กำหนด origin ที่อนุญาต (ปรับใน .env สำหรับ production)
+	app.Use(cors.New(cors.Config{
+		AllowOrigins:     "http://localhost:5173,http://localhost:80,http://localhost",
+		AllowMethods:     "GET,POST,PUT,DELETE,OPTIONS",
+		AllowHeaders:     "Origin,Content-Type,Accept,Authorization",
+		AllowCredentials: true,
+	}))
 
 	authRepo := repositories.NewPostgresAuthRepo(db)
 	authService := service.NewAuthService(authRepo)
@@ -47,7 +56,7 @@ func main() {
 	app.Get("/transactions/:userID", transactionHandler.GetSummaryByUserID)
 	app.Post("/transactions", transactionHandler.Create)
 	app.Put("/transactions", transactionHandler.Edit)
-	app.Delete("/transactions/:userID", transactionHandler.Delete)
+	app.Delete("/transactions/:id", transactionHandler.Delete)
 
 	app.Get("/categories", categoryHandler.GetAll)
 

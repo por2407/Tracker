@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "dashboard": "แดชบอร์ด",
+    "transactions": "ธุรกรรม",
+    "logout": "ออกจากระบบ"
+  },
+  "auth": {
+    "email": "อีเมล",
+    "password": "รหัสผ่าน",
+    "fullName": "ชื่อ-นามสกุล",
+    "signingIn": "กำลังเข้าสู่ระบบ…",
+    "creating": "กำลังสร้างบัญชี…",
+    "signIn": "เข้าสู่ระบบ",
+    "createAccount": "สร้างบัญชี",
+    "noAccount": "ยังไม่มีบัญชีใช่ไหม?",
+    "hasAccount": "มีบัญชีแล้วใช่ไหม?",
+    "createLink": "สร้างบัญชีใหม่",
+    "signInLink": "เข้าสู่ระบบ",
+    "loginSubtitle": "เข้าสู่ระบบบัญชีของคุณ",
+    "registerSubtitle": "สร้างบัญชีฟรีของคุณ",
+    "passwordMin": "รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร",
+    "invalidCredentials": "อีเมลหรือรหัสผ่านไม่ถูกต้อง กรุณาลองใหม่",
+    "registrationFailed": "การสมัครสมาชิกล้มเหลว กรุณาลองใหม่"
+  },
+  "dashboard": {
+    "title": "แดชบอร์ด",
+    "recentTransactions": "ธุรกรรมล่าสุด",
+    "seeAll": "ดูทั้งหมด →",
+    "noTransactions": "ไม่มีธุรกรรมในช่วงเวลานี้",
+    "totalIncome": "รายรับทั้งหมด",
+    "totalExpense": "รายจ่ายทั้งหมด",
+    "balance": "ยอดคงเหลือ"
+  },
+  "transactions": {
+    "title": "ธุรกรรม",
+    "add": "เพิ่มธุรกรรม",
+    "editTitle": "แก้ไขธุรกรรม",
+    "newTitle": "ธุรกรรมใหม่",
+    "noData": "ไม่พบธุรกรรมในช่วงเวลานี้",
+    "addFirst": "เพิ่มธุรกรรมแรกของคุณ",
+    "period": "ช่วงเวลา",
+    "income": "รายรับ",
+    "expense": "รายจ่าย",
+    "amount": "จำนวนเงิน (฿)",
+    "category": "หมวดหมู่",
+    "note": "หมายเหตุ",
+    "date": "วันที่",
+    "selectCategory": "เลือกหมวดหมู่…",
+    "notePlaceholder": "บันทึกย่อ",
+    "saveChanges": "บันทึกการเปลี่ยนแปลง",
+    "saving": "กำลังบันทึก…",
+    "cancel": "ยกเลิก",
+    "delete": "ลบ",
+    "confirmDeleteTitle": "ลบธุรกรรม",
+    "confirmDeleteMsg": "คุณแน่ใจหรือไม่ที่จะลบธุรกรรมนี้? ไม่สามารถย้อนกลับได้",
+    "editLabel": "แก้ไขธุรกรรม",
+    "deleteLabel": "ลบธุรกรรม",
+    "noDescription": "ไม่มีรายละเอียด"
+  },
+  "period": {
+    "daily": "รายวัน",
+    "monthly": "รายเดือน",
+    "yearly": "รายปี"
+  },
+  "common": {
+    "loading": "กำลังโหลด…",
+    "appName": "Finance Tracker",
+    "confirm": "ยืนยัน",
+    "cancel": "ยกเลิก",
+    "somethingWrong": "เกิดข้อผิดพลาด กรุณาลองใหม่",
+    "invalidAmount": "กรุณาระบุจำนวนเงินที่ถูกต้อง",
+    "selectCategory": "กรุณาเลือกหมวดหมู่"
+  }
+}

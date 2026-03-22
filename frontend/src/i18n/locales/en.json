@@ -1,0 +1,74 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "transactions": "Transactions",
+    "logout": "Logout"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "fullName": "Full Name",
+    "signingIn": "Signing in…",
+    "creating": "Creating account…",
+    "signIn": "Sign In",
+    "createAccount": "Create Account",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "createLink": "Create one",
+    "signInLink": "Sign In",
+    "loginSubtitle": "Sign in to your account",
+    "registerSubtitle": "Create your free account",
+    "passwordMin": "Password must be at least 6 characters.",
+    "invalidCredentials": "Invalid credentials. Please try again.",
+    "registrationFailed": "Registration failed. Please try again."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "recentTransactions": "Recent Transactions",
+    "seeAll": "See all →",
+    "noTransactions": "No transactions for this period.",
+    "totalIncome": "Total Income",
+    "totalExpense": "Total Expense",
+    "balance": "Balance"
+  },
+  "transactions": {
+    "title": "Transactions",
+    "add": "Add Transaction",
+    "editTitle": "Edit Transaction",
+    "newTitle": "New Transaction",
+    "noData": "No transactions found for this period.",
+    "addFirst": "Add your first transaction",
+    "period": "Period",
+    "income": "Income",
+    "expense": "Expense",
+    "amount": "Amount (฿)",
+    "category": "Category",
+    "note": "Note",
+    "date": "Date",
+    "selectCategory": "Select a category…",
+    "notePlaceholder": "What was this for?",
+    "saveChanges": "Save Changes",
+    "saving": "Saving…",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "confirmDeleteTitle": "Delete Transaction",
+    "confirmDeleteMsg": "Are you sure you want to delete this transaction? This action cannot be undone.",
+    "editLabel": "Edit transaction",
+    "deleteLabel": "Delete transaction",
+    "noDescription": "No description"
+  },
+  "period": {
+    "daily": "Daily",
+    "monthly": "Monthly",
+    "yearly": "Yearly"
+  },
+  "common": {
+    "loading": "Loading…",
+    "appName": "Finance Tracker",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "somethingWrong": "Something went wrong.",
+    "invalidAmount": "Please enter a valid positive amount.",
+    "selectCategory": "Please select a category."
+  }
+}
